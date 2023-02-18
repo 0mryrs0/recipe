@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    height: 100%;
+    background: linear-gradient(90deg, rgba(34, 192, 195, 0.5) 0%, rgba(253, 187, 45, 0.5) 100%);
+
+}
+
+button {
+    width: 150px;
+    height: 30px;
+    background-color: green;
+    border:none;
+    border-radius: 10px;
+    color: aliceblue;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: 500ms;
+}
+
+button:hover {
+    transform: scale(1.2);
+    background-color: rgba(0, 128, 0, 0.432);
+}
+
+.recipe {
+    width: 500px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.322);
+    padding: 30px;
+    border-radius: 30px;
+    
+}
+
+
+h1 {
+    width: 400px;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px green;
+    margin: 10px 10px 20px 10px;
+    padding: 10px;
+
+}
+
+h3 {
+    width: 120px;
+    background: white;
+    padding: 10px;
+    margin:10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h4 {
+    margin: 10px 10px 10px 30px;
+    
+}
+ul, ol{
+    margin-left: 50px;
+}
+
+.source {
+    text-decoration: none;
+    background-color: green;
+    color: aliceblue;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+h6 {
+    text-align: center;
+    margin: 20px;
+}
+
+
