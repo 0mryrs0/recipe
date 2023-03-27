@@ -2,124 +2,207 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-.main {
+.container {
     width: 100vw;
-    height: 100vh;
-    position: relative;
-    background: radial-gradient(#92ac47,#ffffff);
+    display: flex;
+    flex-direction: column;
 
 }
 
-.heading {
+header {
+    display: flex;
+    flex-direction: column;
+    background-image: url(guild.jpg);
+    background-size: cover;
+}
+
+/*NAVBAR*/
+#navbar {
+    width: 100vw;
+    height: 10vh;
+    margin-top: 10px;
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(3, 6, 10, 0.541);
+}
+
+#navbar .logo-pic {
+    margin-top: 7rem;
     width: 200px;
-    height: 200px;
-    background: #42501a;
+    background-color: rgba(138, 15, 15, 0.541);
     border-radius: 200px;
-    position: absolute;
-    top: calc((100vh - 200px)/2);
-    left: calc((100vw - 200px)/2);
-    color: #ffffff;
-    border: 3px solid #ffffff;
+    padding: 30px;
 
-}
+} 
 
-.heading h2 {
+#navbar .links {
+    width: calc(100vh - 200px);
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 35%;
+    gap: 3rem;
 }
 
-.recipe {
+#navbar .links a {
+    width: 10rem;
+    text-decoration: none; 
+    color: white;
+    align-self: center;
+    padding: 1rem;
+    border-radius: 25px;
+    transition: 500ms;
+}
+
+#navbar .links a:hover {
+    background-color: rgba(74, 74, 83, 0.692);
+    border-bottom: 1px solid rgb(61, 6, 6);
+    scale: 1.01;
+}
+
+/*HERO*/
+#hero {
+    height: calc(100vh - 10vh);
+    background-color: rgba(20, 20, 73, 0.342);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+#hero .left {
+    color: aliceblue;
+    line-height: 3rem;
+    flex-shrink: 0;
+}
+
+#hero .left h1 {
+     font-size: 2.5rem;
+     font-weight: 900;
+}
+
+#hero .left span {
+    color: rgb(189, 51, 51);
+}
+
+#hero .left p {
+    font-size: 1.5rem;
+}
+
+#hero .left button{
+    width: 150px;
+    height: 50px;
+    background-color:rgb(61, 6, 6);
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+#hero img {
+     width: 30rem;
+     height: auto;
+}
+
+
+/*CONTENT or members*/
+#members {
+    width: 100vw;
+    height: auto;
+    padding: 5rem;
+    display: flex;
+    gap: 0 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+    flex-wrap: wrap;
+    background-color: rgb(61, 6, 6);
+}
+
+#members h2 {
+    margin-top: 2rem;
+    margin-bottom: none;
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+    align-self:flex-end;
+}
+
+#members div > img{
     width: 200px;
     height: 200px;
-    border-radius: 200px;
+    object-fit: cover;
+    border-radius: 10px;
     border: 2px solid white;
-    background-size: cover;
-    background-color: #92ac47;
-    background-blend-mode: multiply;
 }
 
-.recipe h3 {
-    width: 120px;
-    background: #ffffff;
-    border: 2px solid #92ac47;
-    color: #42501a;
-    font-weight: 800;
-    font-size: 12px;
+#quote {
+    width: 100vw;
+    height: auto;
+    background-image: url(jellal.jpg);
+    background-position: auto;
+    background-size: cover;
     text-align: center;
-    margin: auto;
-    position: absolute;
-    top: 40%;
-    left: calc((200px - 120px)/2);
-    box-shadow: 2px 2px #c4f147;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: aliceblue;
 }
 
-.r1 {
-    background-image: url("https://www.allrecipes.com/thmb/yNsW7MQOE9W5XDEfhH15ABLWAWg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/5507070_Garlic-Chicken-Stir-Fry-1x1-1-2000-7610f338a6d045ada658bac5d226a486.jpg");
-    background-size: cover;
-    background-color: #92ac47;
-    background-blend-mode: multiply;
-    position: relative;
-    top: 25%;
-    left: 25%;
-    transition: 800ms;
-}
-
-.r1:hover {
-    transform: scale(1.22);
-}
-
-.r2 {
-    background-image: url("https://www.allrecipes.com/thmb/IKu6pRqUOVFj1o_hIxG-pgTuikQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/859251-ff7d11f17e0b4bc580875e85f6501909.jpg");
-    position: relative;
-    top: -30%;
-    left: calc((100vw - 200px)/2);
-    transition: 800ms;
+#quote p{
+    width: 90%;
+    padding: 5rem;
+    margin-top: 5rem;
+    font-style: italic;
+    font-size: 3rem;
+    background-color: rgba(35, 35, 65, 0.63);
 
 }
 
-.r2:hover {
-    transform: scale(1.22);
+#quote h6{
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 5rem;
 }
 
-.r3 {
-    background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F8282331.jpg&q=60&c=sc&orient=true&poi=auto&h=512");
-    position: relative;
-    top:-35%;
-    left: 62%;
-    transition: 800ms;
-
+#contact {
+    width: 100vw;
+    height: auto;
+    color: aliceblue;
+    padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(61, 6, 6), black);
 }
 
-.r3:hover {
-    transform: scale(1.22);
+#contact .contact-text {
+    width: 50vw;
+    text-align: left;
 }
 
-.r4 {
-    background-image: url("https://www.allrecipes.com/thmb/tIMI4lwrkNmozdpkIt__1YLnUGQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/4463950-4bfc1e31d9b44a61944cf863f73cd8b9.jpg");
-    position: relative;
-    bottom: 25%;   
-    left: 30%;
-    transition: 800ms;
-
+#contact .contact-text h3 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
 }
 
-.r4:hover {
-    transform: scale(1.22);
+#contact button {
+    width: 5rem;
+    height: 3rem;
+    background-color: black;
+    color: aliceblue;
 }
 
-.r5 {
-    background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fpublic-assets.meredithcorp.io%2F4513314aa85675fefb213761d7d9cc83%2F1653405453snapper%2520both.jpg&q=60&c=sc&orient=true&poi=auto&h=512");
-    position: relative;
-    bottom: 55%;   
-    left: 55%;
-    transition: 800ms;
-
-}
-
-.r5:hover {
-    transform: scale(1.22);
-}
 
